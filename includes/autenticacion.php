@@ -1,10 +1,9 @@
 <?php
-// ¡CLAVE! Primero nos unimos a la sesión para poder revisarla.
-session_start();
+require_once 'config.php';
 
-// Ahora sí, revisamos si el permiso existe.
 if (!isset($_SESSION['id_usuario'])) {
-    header('Location: login.php');
+  
+    header('Location: ' . BASE_URL . 'login.php');
     exit;
 }
 ?>
