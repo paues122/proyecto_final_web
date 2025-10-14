@@ -4,7 +4,7 @@ class Sistema{
     private $_DSN = "pgsql:host=postgres;port=5432;dbname=database";
     private $_USER = "user";
     private $_PASSWORD = "password"; 
-    private $_DB = null;
+    protected $_DB = null;
 
     public function connect(){
         try {

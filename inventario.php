@@ -1,6 +1,5 @@
 <?php
-// Incluimos la seguridad y el nuevo modelo de inventario
-require_once 'includes/auth_check.php';
+
 require_once 'models/inventario.php';
 
 // Creamos una instancia de nuestro inventario
