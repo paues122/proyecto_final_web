@@ -1,5 +1,12 @@
+<?php
 
-<?php include 'includes/header.php'; ?>
+include_once("models/sistemam.php");
+$app = new Sistema();
+$app->isAuth(); 
+
+
+include 'includes/header.php'; 
+?>
 
 <section class="quotation-card card">
   <h1>Déjanos tus datos</h1>

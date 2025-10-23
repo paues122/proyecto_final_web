@@ -1,11 +1,9 @@
 <?php
-require_once "sistema.php";
+
+require_once __DIR__ . "/sistemam.php";
 
 class Inventario extends Sistema{
 
-    /**
-     * Lee todos los vehículos del inventario.
-     */
     public function read() {
         $this->connect();
         $sql = "SELECT * FROM inventario ORDER BY marca, nombre";
@@ -14,10 +12,6 @@ class Inventario extends Sistema{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    /**
-     * Crea un nuevo vehículo en el inventario.
-     * @param array $data Los datos del vehículo a crear.
-     */
     public function create($data){
         $this->connect();
         $sql = "INSERT INTO inventario(nombre, modelo, marca, anio, precio, mensualidad, enganche) 
@@ -36,10 +30,6 @@ class Inventario extends Sistema{
         return $stmt->rowCount();
     }
 
-    /**
-     * Elimina un vehículo del inventario por su ID.
-     * @param int $id_vehiculo El ID del vehículo a eliminar.
-     */
     public function delete($id_vehiculo){
         if (!is_numeric($id_vehiculo)) {
             return 0;
@@ -51,8 +41,6 @@ class Inventario extends Sistema{
         $stmt->execute();
         return $stmt->rowCount();
     }
-    
-    // Aquí podrías agregar las funciones readOne($id) y update($data, $id)
-    // siguiendo la misma lógica que en tu ejemplo de "Tratamiento".
+
 }
 ?>

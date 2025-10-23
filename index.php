@@ -1,5 +1,11 @@
+<?php
 
-<?php include 'includes/header.php'; ?>
+include_once("models/sistemam.php");
+$app = new Sistema();
+$app->isAuth();
+
+include 'includes/header.php'; 
+?>
 
 <div id="autoAgenciaCarousel" class="carousel slide w-100" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -55,12 +61,12 @@
       </article>
     </div>
 
-  </div> </section>
+  </div>
+</section>
+
 <section class="about-section">
   <h2>¿Quiénes somos?</h2>
-  <p>Somos Agencia GAM, tu agencia multimarca favorita dedicada a ofrecerte la mejor experiencia de compra de autos. Confía en nosotros para encontrar el auto perfecto que se adapte a tus necesidades y presupuesto.</p>
+  <p>Somos Agencia GAM, tu agencia multimarca favorita dedicada a ofrecerte la mejor experiencia de compra de autos.</p>
 </section>
 
 <?php include 'includes/footer.php'; ?>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
