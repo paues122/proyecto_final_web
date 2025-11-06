@@ -1,0 +1,121 @@
+/* =========================================
+   MAIN.CSS - Estilos Globales y Variables
+   ========================================= */
+
+/* --- Importar Fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* --- Variables de Color (basadas en tus capturas) --- */
+:root {
+  --color-primario: #0d6efd; /* Azul de Bootstrap */
+  --color-primario-oscuro: #030640;
+  --color-secundario: #198754; /* Verde para acentos */
+  --color-texto: #333;
+  --color-fondo: #f8f9fa;
+  --color-blanco: #ffffff;
+  --color-borde: #dee2e6;
+}
+
+/* --- Estilos Globales --- */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+/* --- Estilo del Header (logo y título) --- */
+body > header:first-of-type {
+  background-color: var(--color-blanco);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+
+/* =========================================
+   ¡LA SOLUCIÓN DEL NAVBAR!
+   ========================================= */
+/*
+ * Esta regla anula la clase 'bg-dark' de Bootstrap
+ * y la reemplaza con tu color azul primario,
+ * exactamente como en tu captura de pantalla.
+*/
+.navbar.bg-dark {
+  background-color: var(--color-primario) !important;
+}
+
+/* Estilo para el SEGUNDO header (el título grande azul) */
+header.p-3.text-center {
+  background-color: var(--color-primario);
+}
+header.p-3.text-center h1 {
+  color: var(--color-blanco);
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   Estilos del Footer (¡Restaurados!)
+   ========================================= */
+
+.footer_container{
+    background-color: slategray;
+}
+
+/* Contenedor del sprite */
+.social-sprite {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centrar los íconos */
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sprite base */
+.icon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background-image: url("../images/general/sprite_social.png");
+  background-repeat: no-repeat;
+  transition: transform .15s ease;
+}
+.icon:hover { transform: scale(1.06); }
+
+/* Ocultar texto para accesibilidad */
+.vh {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,1px,1px);
+  white-space: nowrap; border: 0;
+}
+
+/* Posiciones del sprite */
+.icon.fb { background-position:   0    0; }
+.icon.tw { background-position:  -64px 0; }
+.icon.ig { background-position: -128px 0; }
+
+/* Estilos de tu footer.php. */
+footer.text-white {
+  background-color: var(--color-primario);
+  border-radius: 8px 8px 0 0;
+}
+
+footer .bg-dark.bg-opacity-25 {
+  background-color: rgba(0,0,0, .25) !important;
+}
+
+footer a {
+  color: var(--color-blanco);
+}
+
+/* Tus otras clases de .tarjeta_contacto, etc. 
+   (Las he omitido aquí por brevedad, 
+   puedes pegarlas debajo de esto si las necesitas) 
+*/

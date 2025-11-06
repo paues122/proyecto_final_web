@@ -1,0 +1,52 @@
+/* =========================================
+   INDEX.CSS - Estilos para index.php
+   ========================================= */
+
+/* --- Tarjetas "Datos curiosos" --- */
+.card-img-top.object-cover {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* --- Contenido "Qué trabajos se van a salvar" --- */
+
+/* Estilo para la fecha "Sábado 30 de agosto..." */
+.date-badge {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block; /* Para que no ocupe toda la línea */
+  margin-bottom: 1rem;
+}
+
+/* --- Sidebar "Top 10 empleos en riesgo" --- */
+.sidebar-box {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  overflow: hidden; /* Para que el header se alinee con las esquinas */
+  box-shadow: 0 4px 10px rgba(0,0,0, 0.05);
+}
+
+.sidebar-box h5 {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  padding: 1rem;
+  margin: 0;
+}
+
+.sidebar-box ul {
+  padding: 1rem 1rem 1rem 2.5rem; /* Espacio para los <li> */
+  margin-bottom: 0;
+}
+
+/* --- Formulario azul --- */
+/* Bootstrap ya lo maneja con .bg-primary, pero si quieres forzarlo: */
+form[action="pregunta"] {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
