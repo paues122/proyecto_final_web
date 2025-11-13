@@ -36,7 +36,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="usuario.php">Usuarios</a></li>
             <li><a class="dropdown-item" href="role.php">Roles</a></li>
-            <li><a class="dropdown-item" href="privilegio.php">Privilegios</a></li>
+            <li><a class="dropdown-item" href="privilege.php">Privilegios</a></li>
           </ul>
         </li>
         <li class="nav-item">

@@ -2,7 +2,12 @@
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
-require_once "sistema.php";
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
+
+require_once __DIR__."/sistema.php";
 class Reporte extends Sistema{
     var $content;
     function __construct(){
@@ -39,6 +44,48 @@ class Reporte extends Sistema{
         </table>";
         $html2pdf->writeHTML($this->content);
         $html2pdf->output('ReporteInstitucion.pdf');
+    }
+
+    function institucionesExcel($nombre){
+        $instituciones = new Institucion();
+        $data = $instituciones->reporteInstitucionesInvestigadores();
+        // Crear una nueva instancia de la hoja de cálculo
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+        // Añadir datos a las celdas
+        $sheet->setCellValue('A1', 'Institución');
+        $sheet->setCellValue('B1', 'Cantidad de Investigadores');
+        $i=2;
+        foreach ($data as $institucion):
+            $sheet->setCellValue('A'.$i, $institucion['institucion']);
+            $sheet->setCellValue('B'.$i, $institucion['total_investigadores']);
+            $i++;
+        endforeach;
+        // Crear un escritor para el formato XLS
+        $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xls($spreadsheet);
+
+        // Configurar las cabeceras para la descarga del archivo
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename="'.$nombre.'"');
+        header('Cache-Control: max-age=0');
+
+        // Guardar el archivo directamente en el stream de salida
+        $writer->save('php://output');
+        exit;
+    }
+
+    function reporteQR(){
+        $qrCode = QrCode::create("<h1>Reporte de QR Code</h1><p>Generado en PHP</p>")
+        ->setSize(300)
+        ->setMargin(10);
+
+    // 4. Crear una instancia del escritor
+        $writer = new PngWriter();
+
+    // 5. Generar y mostrar la imagen en el navegador
+        $result = $writer->write($qrCode);
+        header('Content-Type: '.$result->getMimeType());
+        echo $result->getString();
     }
 }
 ?>

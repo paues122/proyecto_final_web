@@ -9,11 +9,10 @@ include_once('./views/header.php');
             <div class="card shadow">
                 <img src="./images/img1.png" class="card-img-top object-cover" alt="Dato 1">
                 <div class="card-body">
-                    <h5 class="card-title">Dato 1</h5>
-                    <p class="card-text">Especialista en inteligencia artificial aplicada al análisis de datos.</p>
-                    <a href="#" class="btn btn-outline-primary">Ver más</a>
-                    <a href="reportes.php?action=InstitucionesInvestigadores" target="_blank" class="btn btn-outline-secondary">Generar Reporte</a>
-                </div>
+            <h5 class="card-title">Dato 1</h5>
+            <p class="card-text">Especialista en inteligencia artificial aplicada al análisis de datos.</p>
+            <a href="https://www.nationalgeographic.com.es/tecnologia/40-profesiones-que-van-a-desaparecer-por-culpa-chatgpt_25974" class="btn btn-outline-primary">Ver más</a>
+          </div>
             </div>
         </div>
         <div class="col-md-4">
@@ -22,7 +21,7 @@ include_once('./views/header.php');
                 <div class="card-body">
                     <h5 class="card-title">Dato 2</h5>
                     <p class="card-text">Experto en ética de la tecnología y transformación digital.</p>
-                    <a href="#" class="btn btn-outline-primary">Ver más</a>
+                    <a href="https://www.gradomania.com/noticias_universitarias/estas-son-las-40-profesiones-que-pueden-desaparecer-por-culpa-de-la-ia-org-8835.html" class="btn btn-outline-primary">Ver más</a>
                 </div>
             </div>
         </div>
@@ -32,7 +31,7 @@ include_once('./views/header.php');
                 <div class="card-body">
                     <h5 class="card-title">Dato 3</h5>
                     <p class="card-text">Investigaciones sobre impacto social de la automatización.</p>
-                    <a href="#" class="btn btn-outline-primary">Ver más</a>
+                    <a href="https://www.redseguridad.com/actualidad/empleos-inteligencia-artificial-ia_20250113.html" class="btn btn-outline-primary">Ver más</a>
                 </div>
             </div>
         </div>
@@ -46,7 +45,7 @@ include_once('./views/header.php');
     <div class="row mt-4">
 
         <div class="col-md-8">
-            <img src="1(2).jpg" class="img-fluid rounded mb-3" alt="IA en trabajos">
+            <img src="./images/extra.png" class="img-fluid rounded mb-3" alt="IA en trabajos">
             <p>
                 Podemos predecir qué trabajos reemplazará la IA, aunque no con certeza absoluta. Sin embargo, es posible
                 identificar el impacto potencial en el mercado laboral:

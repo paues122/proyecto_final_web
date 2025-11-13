@@ -1,5 +1,5 @@
 <?php
-require_once 'models/sistema.php';
+require_once __DIR__.'/models/sistema.php';
 $sistema = new Sistema();
 $login = $sistema->login("20030974@itcelaya.edu.mx", "123");
 var_dump($login);

@@ -54,3 +54,4 @@
         <input type="submit" class="btn btn-success" id="enviar" name="enviar" value="Guardar">
     </div>
 </form>
+<a href="./investigador.php"><button class="btn btn-danger">Cancelar</button></a>

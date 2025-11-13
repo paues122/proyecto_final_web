@@ -1,6 +1,6 @@
 <?php 
-include_once("../models/sistema.php");
-include_once("../models/institucion.php");
+include_once(__DIR__."/../models/sistema.php");
+include_once(__DIR__."/../models/institucion.php");
 $app = new Sistema();
 $institucion = new Institucion();
 $app->checarRol('Index');
@@ -9,8 +9,8 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'login';
 switch ($action) {
     default:
         $datosGraficas = $institucion -> reporteInstitucionesInvestigadores();
-        include_once("./views/index/index.php");
+        include_once(__DIR__."/views/index/index.php");
         break;
 }
-include_once("./views/footer.php");
+include_once(__DIR__."/views/footer.php");
 ?>

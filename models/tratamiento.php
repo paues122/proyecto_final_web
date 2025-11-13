@@ -1,5 +1,5 @@
 <?php
-require_once "sistema.php";
+require_once __DIR__."/sistema.php";
 class Tratamiento extends Sistema {
     function create($data){
         $this->connect();
@@ -61,7 +61,7 @@ class Tratamiento extends Sistema {
     function delete($id){
         if (is_numeric($id)) {
             $this->connect();
-            
+            //Despues de la conexion a la bd
             $this-> _DB -> beginTransaction();
             try {
                 $sql = "DELETE FROM tratamiento WHERE id_tratamiento = :id_tratamiento";

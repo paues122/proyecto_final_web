@@ -1,7 +1,9 @@
 <h1>Instituciones</h1>
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
     <a href="institucion.php?action=create" class="btn btn-success">Nuevo</a>
-    <a class="btn btn-primary" href="./reporte.php?accion=institucionesInvestigadores" target="_blank">Imprimir reporte</a>
+    <a class="btn btn-info" href="./reporte.php?accion=institucionesInvestigadores" target="_blank">Imprimir reporte PDF</a>
+    <a class="btn btn-primary" href="./reporte.php?accion=institucionesExcel" target="_blank">Imprimir reporte excel</a>
+    <a class="btn btn-info" href="./reporte.php?accion=reporteQR" target="_blank">Generar QR</a>
 </div>
 <table class="table">
   <thead>

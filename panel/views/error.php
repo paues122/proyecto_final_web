@@ -1,11 +1,11 @@
 <?php 
-include_once("./views/login/header.php");
+include_once(__DIR__."/login/header.php");
 if(isset($alerta['mensaje']) && isset($alerta['tipo'])): ?>
     <div class="alert alert-<?php echo $alerta['tipo']; ?> " role="alert">
         <?php echo $alerta['mensaje']; ?>
     </div>
 <?php endif; 
-include_once("./views/login/login.php");
-include_once("./views/login/footer.php");
+include_once(__DIR__."/login/login.php");
+include_once(__DIR__."/login/footer.php");
 
 ?>

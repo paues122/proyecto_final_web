@@ -11,6 +11,16 @@ switch($accion){
         $app->checarRol('Administrador');
         $app->institucionesInvestigadores();
         break;
+    case 'institucionesExcel':
+        $app->checarRol('Administrador');
+        $fecha_actual = date("d-m-Y");
+        $numero_aleatorio = rand(1000, 9999);
+        $app->institucionesExcel('Reporte_Instituciones_'.$fecha_actual.'_'.$numero_aleatorio.'.xls');
+        break;
+    case 'reporteQR':
+        $app->checarRol('Administrador');
+        $app->reporteQR();
+        break;
     default:
         echo "Acción no válida";
         break;

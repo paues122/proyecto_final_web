@@ -23,8 +23,8 @@
       <div class="container py-3 small d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div>© <?= date('Y') ?> IA y Trabajo — Red de investigación</div>
         <div class="mt-2 mt-md-0">
-          <a class="text-white text-decoration-underline me-3" href="/politica.php">Privacidad</a>
-          <a class="text-white text-decoration-underline" href="/contacto.php">Soporte</a>
+          <a class="text-white text-decoration-underline me-3" href="privacidad.php">Privacidad</a>
+          <a class="text-white text-decoration-underline" href="contacto.php">Soporte</a>
         </div>
       </div>
     </div>
